@@ -1,0 +1,40 @@
+body{
+  background-color: gray;
+  background-image: url("../media/bg.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-item{
+  font-size: 16px;
+  width: 5em;
+  height: 5em;
+  text-align: center;
+}
+
+.key{
+  background-color: rgba(110, 110, 110, 0.5);
+  border: 2px black solid;
+  border-radius: 0.5em;
+  transition-duration: 1;
+}
+
+.key .letter{
+  font-size: 3.5em;
+}
+.key .desc{
+  color: #fa0;
+  font-size: 0.8em;
+}
+
+.pressed{
+  border-color: #fa0;
+  box-shadow: -1px -1px 3px #fa0, 1px 1px 3px #fa0;
+}
