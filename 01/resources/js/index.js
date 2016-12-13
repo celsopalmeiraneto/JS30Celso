@@ -32,12 +32,19 @@ var musicKeyboard = (function(){
 
   function playSound(key){
     var sound = document.getElementById(key.dataset.sound);
+    sound.currentTime = 0;
     sound.play();
     performAnimation(key);
   }
 
   function performAnimation(key){
     key.classList.add('pressed');
+
+
+    // ('transitionend', function(e){
+    //   console.log(e);
+    // });
+
     setTimeout(function(){
       key.classList.remove('pressed');
     },100);
@@ -66,6 +73,9 @@ var musicKeyboard = (function(){
       it.addEventListener("click", function(evt){
         var el = findKey(evt.target);
         playSound(el);
+      });
+      it.addEventListener("transitionend",function(e){
+        console.log(e);
       });
     }
 
