@@ -1,0 +1,18 @@
+:root{
+  --img-blur: 0px;
+  --img-spacing: 0px;
+  --border-color: black;
+}
+h3{
+  display: inline-block;
+  margin-right: 1em;
+}
+input{
+  display: inline-block;
+}
+img{
+  filter: blur(var(--img-blur));
+  border-style: solid;
+  border-color: var(--border-color);
+  border-width: var(--img-spacing);
+}
